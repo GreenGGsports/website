@@ -1,0 +1,22 @@
+[
+    {
+        "route": "Webdev",
+        "nev": "Webalkalmazás Fejlesztés",
+        "leiras": "A modern webalkalmazások fejlesztése során a funkcionalitás, a felhasználói élmény és a teljesítmény egyaránt kiemelt szerepet kap. A legújabb technológiák és bevált fejlesztési módszerek alkalmazásával olyan dinamikus, reszponzív és biztonságos webalkalmazásokat készítünk, amelyek megfelelnek a mai digitális világ kihívásainak."
+    },
+    {
+        "route": "Szoftverfejlesztes",
+        "nev": "Egyedi Szoftverfejlesztés",
+        "leiras": "Szoftverek testreszabása, amelyek segítik a vállalkozások növekedését."
+    },
+    {
+        "route": "Adatelemzes",
+        "nev": "Adatelemzés és AI",
+        "leiras": "Machine learning, nyelvi modellek integrálása és adatbányászat."
+    },
+    {
+        "route": "AI-Agent",
+        "nev": "AI agent alapú rendszerek",
+        "leiras": "Folyamat automatizációs megoldások AI agentekkel."
+    }
+]

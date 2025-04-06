@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal</title>
+    <!-- Tailwind CSS link -->
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background: linear-gradient(to right, #F8F1F1, #FFA62B);">
+
+    <!-- Header -->
+    <header class="text-white py-8 px-10 shadow-md" style="background-color: #062743">
+        <div class="w-full  mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold" style="color: #F8F1F1;">
+                <a href="/">GGsolutions</a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6" style="color: #F8F1F1;">
+                <a href="/" class="hover:text-blue-400">Kezdőlap</a>
+                <a href="/services" class="hover:text-blue-400">Szolgáltatások</a>
+                <a href="/products" class="hover:text-blue-400">Termékek</a>
+                <a href="/about" class="hover:text-blue-400">Rólunk</a>
+                <a href="/contact" class="hover:text-blue-400">Kapcsolat</a>
+            </nav>
+
+            <!-- Hamburger Menu Button -->
+            <button id="hamburger-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="md:hidden flex flex-col items-center bg-gray-800 py-4 space-y-4 hidden">
+            <a href="/" class="hover:text-blue-400">Kezdőlap</a>
+            <a href="/services" class="hover:text-blue-400">Szolgáltatások</a>
+            <a href="/products" class="hover:text-blue-400">Termékek</a>
+            <a href="/about" class="hover:text-blue-400">Rólunk</a>
+            <a href="/contact" class="hover:text-blue-400">Kapcsolat</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Content goes here -->
+    </main>
+
+    <!-- Tailwind JS for toggling mobile menu -->
+    <script>
+        const hamburgerBtn = document.getElementById('hamburger-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+
+        hamburgerBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+    </script>
+
+    <div class="main_container py-16 px-6" style="background-color: #F9F9F9">
+        <div class="content max-w-3xl mx-auto p-8 rounded-lg shadow-lg text-center">
+            <h2 class="text-2xl font-bold mb-4" style="color":"#062743">Küldetésünk</h2>
+            <p class="text leading-relaxed" style= "color: #">
+                A célunk, hogy egyszerűsítsük a vállalkozások napi adminisztrációját és segítsünk okos döntéseket hozni, 
+                hogy a kis- és középvállalkozások gyorsabban növekedhessenek és sikeresebbek legyenek.
+            </p>
+        </div>
+    </div>
+    
+    <section class="service_container mx-auto py-20 text-center">
+        <h2 class="text-3xl font-bold text mb-10" style="color":"#062743">Szolgáltatásaink</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+            {% for szolgaltatas in szolgaltatasok %}
+            <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg flex flex-row items-center space-x-4">
+                <div class="w-[30%] aspect-square flex-shrink-0">
+                    <img src="{{ url_for('static', filename='images/icons8-web-application-100.png') }}" 
+                         alt="Service Icon" class="w-full h-full object-contain p-2">
+                </div>
+                <div class="w-[70%]">
+                    <h3 class="text-xl font-semibold mb-1">
+                        <a href="{{ url_for('szolgaltatas', route=szolgaltatas.route) }}"
+                           class="hover:underline text-[#062743]">
+                            {{ szolgaltatas.nev }}
+                        </a>
+                    </h3>
+                    <p class="text-sm">{{ szolgaltatas.leiras }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+    </section>
+    
+    
+    <!-- CTA -->
+    <section class="text-white py-10 text-center"style="background-color: #F9F9F9">
+        <h2 class="text-3xl font-semibold mb-4" style="color: #062743">Készen állsz a digitális fejlődésre?</h2>
+        <a href="/contact" class="text py-3 px-6 rounded-lg hover:bg-blue-500" style="background-color: #08FFC8 ; color: #062743" >Kezdd el most!</a>
+    </section>
+    <section class=" py-16">
+        <div class="container mx-auto text-center">
+            <h3 class="text-2xl font-semibold mb-6">Referenciák</h3>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg">
+                    <h4 class="font-semibold mb-4">Cég 1</h4>
+                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+<!-- Footer -->
+<footer class="text-white py-6 mt-10 text-center" style="background-color: #062743">
+    <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; {{ current_year }} GGsolutions. Minden jog fenntartva.</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="/privacy-policy" class="hover:text-blue-400 text-sm">Adatvédelmi irányelvek</a>
+            <a href="/terms" class="hover:text-blue-400 text-sm">Felhasználási feltételek</a>
+            <a href="/contact" class="hover:text-blue-400 text-sm">Kapcsolat</a>
+        </div>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://facebook.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22,12A10,10,0,1,0,10,22V14H7v-2h3V9.5A4,4,0,0,1,14,5h2V7H14a2,2,0,0,0-2,2V12h4l-1,2H12v8A10,10,0,0,0,22,12Z"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23,4.9a9.1,9.1,0,0,1-2.6.7A4.5,4.5,0,0,0,22.4,3a9.1,9.1,0,0,1-2.9,1.1A4.5,4.5,0,0,0,11.5,8a12.9,12.9,0,0,1-9.3-4.7A4.5,4.5,0,0,0,4,9.6a4.5,4.5,0,0,1-2-.5v.1a4.5,4.5,0,0,0,3.6,4.4,4.6,4.6,0,0,1-2,.1,4.5,4.5,0,0,0,4.2,3.1A9,9,0,0,1,2,18.4a12.8,12.8,0,0,0,7,2A12.9,12.9,0,0,0,22,7.3c0-.2,0-.4,0-.5A9.2,9.2,0,0,0,23,4.9Z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20,2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V4A2,2,0,0,0,20,2ZM8,18H5V9H8ZM6.5,7.5A1.5,1.5,0,1,1,8,6,1.5,1.5,0,0,1,6.5,7.5ZM19,18H16V13a2,2,0,0,0-4,0v5H9V9h3v1.2A3,3,0,0,1,18,9V18Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+</html>

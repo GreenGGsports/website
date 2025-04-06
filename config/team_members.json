@@ -1,0 +1,20 @@
+[
+    {
+        "name": "Kovács Péter",
+        "position": "Szoftverfejlesztő",
+        "bio": "Péter a backend fejlesztésért felelős, mindig új kihívásokat keres a legújabb technológiák területén.",
+        "image": "static/images/aron_tarnoy.jpeg"
+    },
+    {
+        "name": "Szabó Anna",
+        "position": "UI/UX Designer",
+        "bio": "Anna a felhasználói élményért és a látványos, funkcionális dizájnok megvalósításáért felelős.",
+        "image": "https://via.placeholder.com/150"
+    },
+    {
+        "name": "Tóth Dávid",
+        "position": "Projektmenedzser",
+        "bio": "Dávid irányítja a projekteket, biztosítva, hogy minden határidőre és a legmagasabb minőségben készül el.",
+        "image": "https://via.placeholder.com/150"
+    }
+]
