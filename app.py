@@ -30,6 +30,11 @@ def about():
 def contact():
     return render_template('contact.html')
 
+
+@app.route('/products')
+def products():
+    return render_template("products.html")
+
 if __name__ == "__main__":
     app.run(debug=True, host="0.0.0.0")
 

@@ -74,12 +74,12 @@
         <h2 class="text-3xl font-bold text mb-10" style="color":"#062743">Szolgáltatásaink</h2>
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-10">
             {% for szolgaltatas in szolgaltatasok %}
-            <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg flex flex-row items-center space-x-4">
-                <div class="w-[30%] aspect-square flex-shrink-0">
+            <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg flex flex-row items-center space-x-4 h-full">
+                <div class="min-w-[100px] w-[100px] h-[100px]">
                     <img src="{{ url_for('static', filename='images/icons8-web-application-100.png') }}" 
                          alt="Service Icon" class="w-full h-full object-contain p-2">
                 </div>
-                <div class="w-[70%]">
+                <div class="flex-1">
                     <h3 class="text-xl font-semibold mb-1">
                         <a href="{{ url_for('szolgaltatas', route=szolgaltatas.route) }}"
                            class="hover:underline text-[#062743]">
@@ -106,7 +106,10 @@
             <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg">
                     <h4 class="font-semibold mb-4">Cég 1</h4>
-                    <p class="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <a href="https://www.eliteshine.eu" class="text-gray-700" target="_blank" rel="noopener noreferrer">
+                        Elitshine Autómosó
+                      </a>
+                      
                 </div>
             </div>
         </div>

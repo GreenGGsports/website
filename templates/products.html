@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weboldal</title>
+    <!-- Tailwind CSS link -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+</head>
+<body style="background: linear-gradient(to right, #F8F1F1, #FFA62B);">
+
+    <!-- Header -->
+    <header class="text-white py-8 px-10 shadow-md" style="background-color: #062743">
+        <div class="w-full  mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-2xl font-bold" style="color: #F8F1F1;">
+                <a href="/">GGsolutions</a>
+            </div>
+
+            <!-- Desktop Menu -->
+            <nav class="hidden md:flex space-x-6" style="color: #F8F1F1;">
+                <a href="/" class="hover:text-blue-400">Kezdőlap</a>
+                <a href="/services" class="hover:text-blue-400">Szolgáltatások</a>
+                <a href="/products" class="hover:text-blue-400">Termékek</a>
+                <a href="/about" class="hover:text-blue-400">Rólunk</a>
+                <a href="/contact" class="hover:text-blue-400">Kapcsolat</a>
+            </nav>
+
+            <!-- Hamburger Menu Button -->
+            <button id="hamburger-btn" class="md:hidden focus:outline-none">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                </svg>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav id="mobile-menu" class="md:hidden flex flex-col items-center bg-gray-800 py-4 space-y-4 hidden">
+            <a href="/" class="hover:text-blue-400">Kezdőlap</a>
+            <a href="/services" class="hover:text-blue-400">Szolgáltatások</a>
+            <a href="/products" class="hover:text-blue-400">Termékek</a>
+            <a href="/about" class="hover:text-blue-400">Rólunk</a>
+            <a href="/contact" class="hover:text-blue-400">Kapcsolat</a>
+        </nav>
+    </header>
+<!-- Termékleírás szakasz -->
+<div class="main_container py-16 px-6" style="background-color: #F9F9F9;">
+    <div class="content max-w-3xl mx-auto p-8 rounded-lg shadow-lg text-center">
+        <h2 class="text-2xl font-bold mb-4" style="color: #062743;">
+            Admisztrációs rendszer autómosók számára
+        </h2>
+        <p class="text leading-relaxed" style="color: #333;">
+            Online időpontfoglalás vagy bejelentkezés, kiegészítve egy teljeskörű adminisztrációs felülettel, 
+            ahol automatikusan készülnek a számlázási adatok és kezelhető a napi működés.
+        </p>
+    </div>
+</div>
+<!-- Termékcsomagok szekció -->
+<div class="main_container py-16 px-6 "style="background-color: #F9F9F9;">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-bold text-[#062743]">Csomagok</h2>
+    </div>
+  
+<!-- Mobilnézet: vízszintes görgetés -->
+<div class="md:hidden overflow-x-auto -mx-3 px-6">
+    <div class="flex space-x-3 w-max">
+      
+        <div class="bg-white rounded-lg shadow-md p-6" style="flex: 0 0 70vw;">
+            <h3 class="text-xl font-semibold mb-3 text-gray-800">Komplett rendszer induló vállalkozásoknak</h3>
+            <p class="text-gray-600 text-sm leading-relaxed">
+              Modern weboldal, foglalás, admin és automatikus számlázás egy csomagban – profin, egyszerűen.
+            </p>
+            <p class="text-gray-600 text-sm leading-relaxed mt-3">
+              Neked való, ha:
+            </p>
+            <ul class="text-gray-600 text-sm leading-relaxed list-none mt-2 space-y-1">
+              <li><span class="text-green-500">✔️</span> Már van vállalkozásod, de nincs weboldalad</li>
+              <li><span class="text-green-500">✔️</span> Vagy van, de nem profi, nem modern</li>
+              <li><span class="text-green-500">✔️</span> Online foglalást is szeretnél kezelni</li>
+              <li><span class="text-green-500">✔️</span> Fontos az automatikus számlázás</li>
+            </ul>
+          </div>
+          
+  
+      <div class="bg-white rounded-lg shadow-md p-6" style="flex: 0 0 70vw;">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Foglalási felület + Árlista oldal</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Integrálható meglévő weboldaladhoz – admin rendszerrel és automatikus számlázással.
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed">
+            Neked való, ha:
+        </p>
+        <ul class="text-gray-600 text-sm leading-relaxed list-none mt-2 space-y-1">
+            <li>✔️ Van már saját weboldalad</li>
+            <li>✔️ Szeretnéd, ha az ügyfeleid egyszerűen tudnának időpontot foglalni</li>
+            <li>✔️ Fontos számodra az átlátható admin felület</li>
+            <li>✔️ Automatikusan szeretnél számlázni</li>
+        </ul>
+        
+        
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6" style="flex: 0 0 70vw;">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Csak foglalási modul</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Egyszerű és gyors időpontkezelő modul – akár weboldal nélkül is használható.
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-3">
+          Neked való, ha:
+        </p>
+        <ul class="text-gray-600 text-sm leading-relaxed list-none mt-2 space-y-1">
+          <li><span class="text-green-500">✔️</span> Nincs weboldalad, de szeretnél online foglalásokat</li>
+          <li><span class="text-green-500">✔️</span> Fontos az egyszerűség és gyors bevezetés</li>
+          <li><span class="text-green-500">✔️</span> Nem akarsz admin rendszert vagy számlázást</li>
+          <li><span class="text-green-500">✔️</span> Egy jól működő időpontkezelőt keresel, felesleges dolgok nélkül</li>
+        </ul>
+      </div>
+      <div class="bg-white rounded-lg shadow-md p-6" style="flex: 0 0 70vw;">
+        <h3 class="text-xl font-semibold mb-3 text-gray-800">Egyedi megoldás</h3>
+        <p class="text-gray-600 text-sm leading-relaxed">
+          Teljesen rád szabott rendszer – ha speciális igényeid vannak, mi megvalósítjuk.
+        </p>
+        <p class="text-gray-600 text-sm leading-relaxed mt-3">
+          Neked való, ha:
+        </p>
+        <ul class="text-gray-600 text-sm leading-relaxed list-none mt-2 space-y-1">
+          <li><span class="text-green-500">✔️</span> Olyat szeretnél, amit a sablonmegoldások nem tudnak</li>
+          <li><span class="text-green-500">✔️</span> Egyedi funkciókra, integrációkra van szükséged</li>
+          <li><span class="text-green-500">✔️</span> Szeretnél beleszólni a rendszer működésébe, kinézetébe</li>
+          <li><span class="text-green-500">✔️</span> Fontos számodra, hogy minden pont úgy működjön, ahogy te akarod</li>
+        </ul>
+      </div>
+      
+  
+    </div>
+  </div>
+  
+  
+  
+<!-- Asztali nézet: 2x2 grid -->
+<div class="hidden md:grid grid-cols-2 gap-8 max-w-10xl mx-auto mt-8">
+    <!-- Kártya 1 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">Komplett rendszer induló vállalkozásoknak</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-2">
+        Modern weboldal, időpontfoglalás, admin és automatikus számlázás egy csomagban.
+      </p>
+      <ul class="text-gray-600 text-sm list-none space-y-1">
+        <li>✅ Nincs még weboldalad?</li>
+        <li>✅ Szeretnéd egyből profin indítani a vállalkozást?</li>
+        <li>✅ Weboldal + rendszer egyben</li>
+      </ul>
+    </div>
+  
+    <!-- Kártya 2 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">Foglalási felület + Árlista oldal</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-2">
+        Ha már van weboldalad, de szeretnél egy profi foglalási felületet.
+      </p>
+      <ul class="text-gray-600 text-sm list-none space-y-1">
+        <li>✅ Egyszerűen beépíthető</li>
+        <li>✅ Árlistával és időpontfoglalással</li>
+        <li>✅ Admin + számlázás opció</li>
+      </ul>
+    </div>
+  
+    <!-- Kártya 3 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">Csak foglalási modul</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-2">
+        Minimalista időpontkezelő modul – weboldal nélkül is használható.
+      </p>
+      <ul class="text-gray-600 text-sm list-none space-y-1">
+        <li>✅ Gyors és egyszerű</li>
+        <li>✅ Linkként megosztható</li>
+        <li>✅ Ideális kezdéshez</li>
+      </ul>
+    </div>
+  
+    <!-- Kártya 4 -->
+    <div class="bg-white rounded-lg shadow-md p-6">
+      <h3 class="text-xl font-semibold mb-3 text-gray-800">Foglalás + Admin + Számlázás</h3>
+      <p class="text-gray-600 text-sm leading-relaxed mb-2">
+        Ha van saját rendszered, de szeretnél hozzá egy profi foglalási megoldást.
+      </p>
+      <ul class="text-gray-600 text-sm list-none space-y-1">
+        <li>✅ Teljes admin felület</li>
+        <li>✅ Automatikus számlázás</li>
+        <li>✅ Ügyféladat-kezelés</li>
+      </ul>
+    </div>
+  </div>
+</div>
+  <div class="main_container py-16 px-6 "style="background-color: #F9F9F9;">
+    <div class="text-center mb-10">
+      <h2 class="text-2xl font-bold text-[#062743]">GYIK</h2>
+    </div>
+  
+    <div class="space-y-4">
+      <details class="group bg-white p-4 rounded-lg shadow">
+        <summary class="flex justify-between items-center cursor-pointer text-gray-800 font-medium">
+          <span>Mennyi idő alatt készül el a rendszer?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <p class="mt-2 text-gray-600 text-sm">
+          Általában 1-2 héten belül, de ez a csomagtól és az egyedi igényektől is függ.
+        </p>
+      </details>
+  
+      <details class="group bg-white p-4 rounded-lg shadow">
+        <summary class="flex justify-between items-center cursor-pointer text-gray-800 font-medium">
+          <span>Havi díj van?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <p class="mt-2 text-gray-600 text-sm">
+          Igen a szolgáltatások havidíjasak de lehetőség van ingyenes próba időszakra
+        </p>
+      </details>
+  
+      <details class="group bg-white p-4 rounded-lg shadow">
+        <summary class="flex justify-between items-center cursor-pointer text-gray-800 font-medium">
+          <span>Kezdő vagyok, segítetek?</span>
+          <svg class="w-5 h-5 text-gray-500 group-open:rotate-180 transition-transform" fill="none" stroke="currentColor" stroke-width="2"
+               viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+          </svg>
+        </summary>
+        <p class="mt-2 text-gray-600 text-sm">
+          Persze! Minden lépésen végigvezetünk, a domain beállítástól a rendszer használatáig.
+        </p>
+      </details>
+    </div>
+  </div>
+</div>
+
+</body>
+<!-- Footer -->
+<footer class="text-white py-6 mt-10 text-center" style="background-color: #062743">
+    <div class="container mx-auto text-center">
+        <p class="text-sm">&copy; {{ current_year }} GGsolutions. Minden jog fenntartva.</p>
+        <div class="flex justify-center space-x-6 mt-4">
+            <a href="/privacy-policy" class="hover:text-blue-400 text-sm">Adatvédelmi irányelvek</a>
+            <a href="/terms" class="hover:text-blue-400 text-sm">Felhasználási feltételek</a>
+            <a href="/contact" class="hover:text-blue-400 text-sm">Kapcsolat</a>
+        </div>
+        <div class="flex justify-center space-x-4 mt-4">
+            <a href="https://facebook.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M22,12A10,10,0,1,0,10,22V14H7v-2h3V9.5A4,4,0,0,1,14,5h2V7H14a2,2,0,0,0-2,2V12h4l-1,2H12v8A10,10,0,0,0,22,12Z"/>
+                </svg>
+            </a>
+            <a href="https://twitter.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M23,4.9a9.1,9.1,0,0,1-2.6.7A4.5,4.5,0,0,0,22.4,3a9.1,9.1,0,0,1-2.9,1.1A4.5,4.5,0,0,0,11.5,8a12.9,12.9,0,0,1-9.3-4.7A4.5,4.5,0,0,0,4,9.6a4.5,4.5,0,0,1-2-.5v.1a4.5,4.5,0,0,0,3.6,4.4,4.6,4.6,0,0,1-2,.1,4.5,4.5,0,0,0,4.2,3.1A9,9,0,0,1,2,18.4a12.8,12.8,0,0,0,7,2A12.9,12.9,0,0,0,22,7.3c0-.2,0-.4,0-.5A9.2,9.2,0,0,0,23,4.9Z"/>
+                </svg>
+            </a>
+            <a href="https://linkedin.com" target="_blank" class="hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M20,2H4A2,2,0,0,0,2,4V20a2,2,0,0,0,2,2H20a2,2,0,0,0,2-2V4A2,2,0,0,0,20,2ZM8,18H5V9H8ZM6.5,7.5A1.5,1.5,0,1,1,8,6,1.5,1.5,0,0,1,6.5,7.5ZM19,18H16V13a2,2,0,0,0-4,0v5H9V9h3v1.2A3,3,0,0,1,18,9V18Z"/>
+                </svg>
+            </a>
+        </div>
+    </div>
+</footer>
+</html>
+<style>
+    .overflow-x-auto::-webkit-scrollbar {
+      display: none;
+    }
+  
+    .overflow-x-auto {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    body {
+        font-family: 'Poppins', sans-serif;
+      }
+  </style>
+  
