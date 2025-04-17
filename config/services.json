@@ -2,21 +2,21 @@
     {
         "route": "Webdev",
         "nev": "Webalkalmazás Fejlesztés",
-        "leiras": "A modern webalkalmazások fejlesztése, a felhasználói élmény és a teljesítmény egyaránt kiemelt szerepet kap, dinamikus, reszponzív és biztonságos webalkalmazásokat készítünk, amelyek megfelelnek a mai digitális világ kihívásainak."
+        "leiras": "A modern webalkalmazások fejlesztése, a felhasználói élmény és a teljesítmény egyaránt kiemelt szerepet kap."
     },
     {
         "route": "Szoftverfejlesztes",
         "nev": "Egyedi Szoftverfejlesztés",
-        "leiras": "Szoftverek testreszabása, amelyek segítik a vállalkozások növekedését."
+        "leiras": "Egyedi szoftverek fejlesztésekor fontos, hogy a legmagasabb technológiai színvonal mellett az ügyfeleket is bevonjuk, így biztosítva elégedettségüket."
     },
     {
         "route": "Adatelemzes",
         "nev": "Adatelemzés és AI",
-        "leiras": "Machine learning, nyelvi modellek integrálása és adatbányászat."
+        "leiras": "Gépi tanulás, nyelvi modellek és adatbányászat alkalmazásával értékes információkat nyerünk az adatokból, segítve a döntéshozatalt."
     },
     {
         "route": "AI-Agent",
         "nev": "AI agent alapú rendszerek",
-        "leiras": "Folyamat automatizációs megoldások AI agentekkel."
-    }
+        "leiras": "AI agentek alkalmazásával folyamatokat automatizálunk, javítva a hatékonyságot és csökkentve az emberi beavatkozást."
+    }    
 ]
