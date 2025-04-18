@@ -1,12 +1,12 @@
 [
     {
-        "name": "Kovács Péter",
+        "name": "Tarnóy Áron",
         "position": "Szoftverfejlesztő",
-        "bio": "Péter a backend fejlesztésért felelős, mindig új kihívásokat keres a legújabb technológiák területén.",
+        "bio": "Full-stack szoftverfejlesztő mesterséges intelligencia (MI) területén szerzett kutatási és gyakorlati tapasztalattal.",
         "image": "static/images/aron_tarnoy.jpeg"
     },
     {
-        "name": "Szabó Anna",
+        "name": "Tarnóy Dániel",
         "position": "UI/UX Designer",
         "bio": "Anna a felhasználói élményért és a látványos, funkcionális dizájnok megvalósításáért felelős.",
         "image": "https://via.placeholder.com/150"

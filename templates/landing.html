@@ -62,7 +62,7 @@
     </script>
 
     <div class="main_container py-16 px-6" style="background-color: #F9F9F9">
-        <div class="content max-w-3xl mx-auto p-8 rounded-lg shadow-lg text-center">
+        <div class="content max-w-3xl mx-auto bg-white opacity-80 p-8 rounded-lg shadow-lg text-center">
             <h2 class="text-2xl font-bold mb-4" style="color":"#062743">Küldetésünk</h2>
             <p class="text leading-relaxed" style= "color: #">
                 A célunk, hogy egyszerűsítsük a vállalkozások napi adminisztrációját és segítsünk okos döntéseket hozni, 
@@ -78,8 +78,9 @@
             <div class="bg-white opacity-80 p-6 rounded-lg shadow-lg grid grid-cols-10 gap-4 h-full">
                 <!-- Icon column: 2 out of 12 columns -->
                 <div class="col-span-2 flex items-start">
-                    <img src="{{ url_for('static', filename='images/icons8-web-application-100.png') }}" 
-                         alt="Service Icon" class="w-16 h-16 object-contain">
+                    <img src="{{ url_for('static', filename='images/' ~ szolgaltatas.img) }}" 
+                    alt="Service Icon" class="w-16 h-16 object-contain">
+               
                 </div>
                 
                 <!-- Text column: 10 out of 12 columns -->

@@ -1,0 +1,25 @@
+# Ignore .env file containing sensitive information
+.env
+
+# Ignore Python bytecode files
+__pycache__/
+*.pyc
+
+# Ignore virtual environment directories
+venv/
+env/
+.venv/
+
+# Ignore Flask instance folder
+instance/
+
+# Ignore database files
+*.db
+
+# Ignore IDE/editor configurations
+.vscode/
+.idea/
+
+# Ignore any other unwanted files
+*.log
+*.bak

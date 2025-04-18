@@ -2,21 +2,25 @@
     {
         "route": "Webdev",
         "nev": "Webalkalmazás Fejlesztés",
-        "leiras": "A modern webalkalmazások fejlesztése, a felhasználói élmény és a teljesítmény egyaránt kiemelt szerepet kap."
+        "leiras": "A modern webalkalmazások fejlesztése, a felhasználói élmény és a teljesítmény egyaránt kiemelt szerepet kap.",
+        "img": "icons8-web-application-100.png"
     },
     {
         "route": "Szoftverfejlesztes",
         "nev": "Egyedi Szoftverfejlesztés",
-        "leiras": "Egyedi szoftverek fejlesztésekor fontos, hogy a legmagasabb technológiai színvonal mellett az ügyfeleket is bevonjuk, így biztosítva elégedettségüket."
+        "leiras": "Egyedi szoftverek fejlesztésekor fontos, hogy a legmagasabb technológiai színvonal mellett az ügyfeleket is bevonjuk, így biztosítva elégedettségüket.",
+        "img": "icons8-software-development-100.png"
     },
     {
         "route": "Adatelemzes",
         "nev": "Adatelemzés és AI",
-        "leiras": "Gépi tanulás, nyelvi modellek és adatbányászat alkalmazásával értékes információkat nyerünk az adatokból, segítve a döntéshozatalt."
+        "leiras": "Gépi tanulás, nyelvi modellek és adatbányászat alkalmazásával értékes információkat nyerünk az adatokból, segítve a döntéshozatalt.",
+        "img": "icons8-data-analysis-100.png"
     },
     {
         "route": "AI-Agent",
         "nev": "AI agent alapú rendszerek",
-        "leiras": "AI agentek alkalmazásával folyamatokat automatizálunk, javítva a hatékonyságot és csökkentve az emberi beavatkozást."
+        "leiras": "AI agentek alkalmazásával folyamatokat automatizálunk, javítva a hatékonyságot és csökkentve az emberi beavatkozást.",
+        "img": "icons8-automation-100.png"
     }    
 ]
